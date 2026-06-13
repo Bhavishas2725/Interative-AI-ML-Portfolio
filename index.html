@@ -517,7 +517,7 @@
                                         <span class="cert-view-hint"><i class="fas fa-eye"></i> View</span>
                                     </li>
                                 </ul>
-                        
+                                <p class="cert-note"><i class="fas fa-info-circle" style="margin-right:0.3rem;"></i>Click any certificate above to view it. Digital copies also available on request.</p>
                             </div>
                         </div>
                     </div>
@@ -592,11 +592,101 @@
         </p>
     </footer>
 
+    <!-- ── PDF MODAL ── -->
+    <div class="modal-overlay" id="certModal" onclick="handleOverlayClick(event)">
+        <div class="modal-box">
+            <div class="modal-header">
+                <div>
+                    <h3 id="modalTitle">Certificate</h3>
+                    <p id="modalSub"></p>
+                </div>
+                <button class="modal-close" onclick="closeCert()" title="Close">✕</button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- iframe or placeholder injected by JS -->
+            </div>
+            <div class="modal-footer">
+                <p id="modalFooterNote">PDF viewer • use the download button to save a copy</p>
+                <a id="modalDownload" href="#" download class="btn-download">
+                    <i class="fas fa-download"></i> Download PDF
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ── Certificate viewer ──
+        // Map filename → PDF path (relative to index.html)
+        const CERT_FILES = {
+            'kmutt-certificate.pdf':        'certificates/kmutt-certificate.pdf',
+            'pondicherry-certificate.pdf':  'certificates/pondicherry-certificate.pdf'
+        };
+
+        function openCert(filename, title, sub) {
+            const path = CERT_FILES[filename];
+            document.getElementById('modalTitle').textContent = title;
+            document.getElementById('modalSub').textContent  = sub;
+            document.getElementById('modalDownload').href    = path;
+            document.getElementById('modalDownload').download = filename;
+
+            const body = document.getElementById('modalBody');
+
+            // Try to load the PDF; show placeholder if file isn't found yet
+            const iframe = document.createElement('iframe');
+            iframe.src   = path;
+            iframe.title = title;
+            iframe.style.cssText = 'width:100%;height:100%;min-height:60vh;border:none;display:block;';
+
+            // If the PDF fails to load, swap to placeholder
+            iframe.onerror = () => showPlaceholder(body, filename);
+
+            body.innerHTML = '';
+            body.appendChild(iframe);
+
+            // Fallback: if after 2 s the iframe is blank (file missing), show helper
+            setTimeout(() => {
+                try {
+                    if (!iframe.contentDocument || iframe.contentDocument.body.innerHTML === '')
+                        showPlaceholder(body, filename);
+                } catch(e) { /* cross-origin — PDF loaded fine */ }
+            }, 2000);
+
+            document.getElementById('certModal').classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function showPlaceholder(body, filename) {
+            body.innerHTML = `
+                <div class="pdf-placeholder">
+                    <i class="fas fa-file-pdf"></i>
+                    <h4>PDF not linked yet</h4>
+                    <p>
+                        Place your certificate file here inside a <code>certificates/</code> folder
+                        next to <code>index.html</code>:
+                    </p>
+                    <p><code>certificates/${filename}</code></p>
+                    <p style="font-size:0.78rem;color:var(--muted);">
+                        Once the file is there, clicking this entry will display it inline.
+                    </p>
+                </div>`;
+        }
+
+        function closeCert() {
+            document.getElementById('certModal').classList.remove('open');
+            document.getElementById('modalBody').innerHTML = '';
+            document.body.style.overflow = '';
+        }
+
+        // Close when clicking the dark backdrop (not the box itself)
+        function handleOverlayClick(e) {
+            if (e.target === document.getElementById('certModal')) closeCert();
+        }
+
+        // Close on Escape key
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') closeCert();
+        });
+    </script>
+
 </body>
 </html>
-
-
-            
-     
-
-       
