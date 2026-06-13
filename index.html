@@ -374,7 +374,7 @@
                 Open to opportunities
             </div>
             <h1>Bhavisha<br><span>Sivakumar</span></h1>
-            <p class="hero-sub">AI &amp; Machine Learning Engineer — Medical Imaging &amp; Computer Vision</p>
+            <p class="hero-sub">AI &amp; Machine Learning Engineer — Aspiring Developer &amp; Programmer</p>
             <p class="hero-location">
                 <i class="fas fa-map-marker-alt"></i>
                 Chennai, Tamil Nadu, India
@@ -399,7 +399,7 @@
         <section id="about">
             <div class="section-label"><h2>About</h2></div>
             <p class="about-text">
-                Fresh AI/ML graduate (B.E., AMET University, May 2026) with hands-on research experience in medical imaging and wildlife computer vision. Interned internationally at KMUTT, Bangkok — designed and deployed deep learning systems using PyTorch, YOLOv8, and GANs for clinical and ecological applications. Passionate about building AI that creates measurable real-world impact.
+                Fresh AI/ML graduate with hands-on research experience in medical imaging and wildlife computer vision. Interned internationally at KMUTT, Bangkok — designed and deployed deep learning systems using PyTorch, YOLOv8, and GANs for clinical and ecological applications. Passionate about building AI that creates measurable real-world impact.
             </p>
         </section>
 
@@ -409,7 +409,7 @@
             <div class="two-col">
                 <div class="card">
                     <div class="card-icon icon-blue"><i class="fas fa-graduation-cap"></i></div>
-                    <h4>B.E. — CS Engineering (AIML)</h4>
+                    <h4>B.E — CS Engineering (AIML)</h4>
                     <p class="sub">AMET University, Chennai</p>
                     <div class="meta"><i class="far fa-calendar-alt"></i> Graduation: May 2026</div>
                     <div class="meta"><i class="fas fa-star" style="color:#F59E0B;"></i> GPA: 8.5 / 10.0</div>
@@ -476,7 +476,8 @@
                             <span class="tl-date">Feb 2025 – Mar 2025</span>
                         </div>
                         <p class="tl-desc">
-                            Built an automated wildlife monitoring system combining YOLOv8 for real-time detection and a custom CNN classifier, achieving 92% classification accuracy across 9 animal species.
+                          Built an automated wildlife monitoring system combining YOLOv8 (real-time detection) and a MobileNetV2-based 
+transfer learning classifier, achieving 91.01% validation accuracy across 9 animal species.
                         </p>
                         <div class="tag-row">
                             <span class="tag">YOLOv8</span><span class="tag">Computer Vision</span><span class="tag">CNN</span><span class="tag">OpenCV</span>
@@ -517,7 +518,6 @@
                                         <span class="cert-view-hint"><i class="fas fa-eye"></i> View</span>
                                     </li>
                                 </ul>
-                                <p class="cert-note"><i class="fas fa-info-circle" style="margin-right:0.3rem;"></i>Click any certificate above to view it. Digital copies also available on request.</p>
                             </div>
                         </div>
                     </div>
@@ -537,7 +537,11 @@
                         <i class="fab fa-github"></i>
                     </div>
                     <p class="project-stack">Python · Machine Learning · XGBoost</p>
-                    <p class="project-desc">Supervised ML model for early-stage thyroid cancer detection using 364 clinical patient records with 16 features. Achieved 93% accuracy and 0.98 AUC-ROC on the UCI dataset. Handled class imbalance with scale_pos_weight in XGBoost.</p>
+                    <p class="project-desc">Built an XGBoost classifier for thyroid cancer recurrence prediction on 383 clinical 
+patient records with 17 features, achieving 93.15% accuracy and F1-score of 0.93, 
+selected via PyCaret AutoML benchmarking with 5-fold cross-validation. Built a Logistic Regression model for patient risk stratification (Low / Intermediate / 
+High), achieving 82.19% accuracy; applied class_weight=balanced, Label Encoding, and 
+StandardScaler to handle class imbalance across 17 clinical features.</p>
                     <span class="project-link">View on GitHub <i class="fas fa-arrow-right" style="font-size:0.7rem;"></i></span>
                 </a>
 
@@ -547,7 +551,9 @@
                         <i class="fab fa-github"></i>
                     </div>
                     <p class="project-stack">Computer Vision · YOLOv8 · CNN</p>
-                    <p class="project-desc">Fine-tuned YOLOv8n on a custom wildlife dataset for real-time bounding-box detection across 9 species. Custom 7-layer CNN achieved 92% validation accuracy, outperforming baseline MobileNetV2.</p>
+                    <p class="project-desc">Fine-tuned YOLOv8n on a custom wildlife dataset to achieve real-time bounding-box detection, localizing animals 
+across 9 species classes (Bear, Deer, Donkey, Elephant, Giraffe, Horse, Lion, Monkey, Tiger). Designed a 9-class animal classifier using MobileNetV2 transfer learning with two-phase fine-tuning (frozen base, 
+then fine-tuned last 30 layers), achieving 91.01% validation accuracy using EarlyStopping and ReduceLROnPlateau.</p>
                     <span class="project-link">View on GitHub <i class="fas fa-arrow-right" style="font-size:0.7rem;"></i></span>
                 </a>
 
