@@ -21,7 +21,7 @@
 
 ---
 
-## 👩‍💻 About This Portfolio
+## About This Portfolio
 
 A **clean, recruiter-ready personal portfolio** built from scratch with vanilla HTML, CSS, and JavaScript — no frameworks, no bloat. Designed with a professional navy & sky-blue palette, Inter typography, and a timeline-based Experience section that highlights international research internships and clickable PDF certificate previews.
 
@@ -29,24 +29,24 @@ A **clean, recruiter-ready personal portfolio** built from scratch with vanilla 
 
 ---
 
-## ✨ Features
+## Features
 
 | Feature | Description |
 |---|---|
-| 🎨 **Professional Design** | Navy `#1E3A5F` + sky-blue `#0EA5E9` palette with Inter font — clean and recruiter-approved |
-| 📱 **Fully Responsive** | Adapts seamlessly from mobile to widescreen |
-| 🏅 **Certificate Viewer** | Click any internship certificate to open it inline via a PDF modal popup |
-| ⬇️ **PDF Download** | Recruiters can download certificates directly from the modal |
-| 🗂️ **Timeline Experience Section** | Vertical timeline layout for internships with role, org, dates, and tech tags |
-| 🧠 **Tech Stack Grid** | Organised skill tags by category — Languages, AI/ML, Tools |
-| 🚀 **Project Cards** | Featured project grid with GitHub links, tech stack labels, and hover effects |
-| 🏆 **Achievements Section** | IBM Certifications + World Records highlighted |
-| ⌨️ **Zero Dependencies** | Pure HTML/CSS/JS — no npm, no build step, no frameworks |
-| ♿ **Accessible** | Semantic HTML, keyboard-navigable modal (Escape to close) |
+| **Professional Design** | Navy `#1E3A5F` + sky-blue `#0EA5E9` palette with Inter font — clean and recruiter-approved |
+| **Fully Responsive** | Adapts seamlessly from mobile to widescreen |
+| **Certificate Viewer** | Click any internship certificate to open it inline via a PDF modal popup |
+| **PDF Download** | Recruiters can download certificates directly from the modal |
+| **Timeline Experience Section** | Vertical timeline layout for internships with role, org, dates, and tech tags |
+| **Tech Stack Grid** | Organised skill tags by category — Languages, AI/ML, Tools |
+| **Project Cards** | Featured project grid with GitHub links, tech stack labels, and hover effects |
+| **Achievements Section** | IBM Certifications + World Records highlighted |
+| **Zero Dependencies** | Pure HTML/CSS/JS — no npm, no build step, no frameworks |
+| **Accessible** | Semantic HTML, keyboard-navigable modal (Escape to close) |
 
 ---
 
-## 🗂️ Project Structure
+## Project Structure
 
 ```
 portfolio/
@@ -62,7 +62,7 @@ portfolio/
 
 ---
 
-## 🧰 Tech Stack
+## Tech Stack
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
@@ -72,7 +72,7 @@ portfolio/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Run Locally
 
@@ -101,22 +101,22 @@ certificates/pondicherry-certificate.pdf
 
 ---
 
-## 📸 Sections Overview
+##  Sections Overview
 
 ```
-🏠  Hero          →  Name, title, location, CTA buttons
-👤  About         →  Summary paragraph (recruiter-optimised)
-🎓  Education     →  Degree details + GPA + tech stack grid
-💼  Experience    →  Timeline: KMUTT (Bangkok) + Pondicherry University
+Hero          →  Name, title, location, CTA buttons
+About         →  Summary paragraph (recruiter-optimised)
+Education     →  Degree details + GPA + tech stack grid
+Experience    →  Timeline: KMUTT (Bangkok) + Pondicherry University
                       └─ 📄 Certificate viewer (PDF modal, inline + download)
-🛠️  Projects      →  Thyroid Cancer Detection · Wildlife Detection · GAN Retinal Synthesis
-🏆  Achievements  →  IBM Certifications · World Records (×5)
-📬  Footer        →  Email · LinkedIn · GitHub
+Projects      →  Thyroid Cancer Detection · Wildlife Detection · GAN Retinal Synthesis
+Achievements  →  IBM Certifications · World Records (×5)
+Footer        →  Email · LinkedIn · GitHub
 ```
 
 ---
 
-## 🌐 Deployment (GitHub Pages)
+##  Deployment (GitHub Pages)
 
 This portfolio is hosted via **GitHub Pages**.
 
@@ -136,7 +136,7 @@ https://<your-username>.github.io/<repo-name>/
 
 ---
 
-## 📋 Customisation Guide
+## Customisation Guide
 
 | What to change | Where in `index.html` |
 |---|---|
@@ -151,7 +151,7 @@ https://<your-username>.github.io/<repo-name>/
 
 ---
 
-## 📄 License
+## License
 
 This project is open source and available under the [MIT License](LICENSE).
 
